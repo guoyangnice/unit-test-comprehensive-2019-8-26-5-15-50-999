@@ -17,18 +17,18 @@ public class Main {
     
 
     public static void main(String[] args) throws Exception {
-    	//»ñÈ¡µ½×îÖÕ´ğ°¸
+    	//è·å–åˆ°æœ€ç»ˆç­”æ¡ˆ
     	getRandomAnswer();
-    	//ÊäÈë´ğ°¸
+    	//è¾“å…¥ç­”æ¡ˆ
         generateAnswerAndCompare();
     }
     
     /**
-     * »ñÈ¡µ½×îÖÕ´ğ°¸
+     * è·å–åˆ°æœ€ç»ˆç­”æ¡ˆ
      */
     public static void getRandomAnswer() {
     	finalAnswer = new int[length];
-    	//Éú³É×îÖÕ´ğ°¸
+    	//ç”Ÿæˆæœ€ç»ˆç­”æ¡ˆ
     	for(int i = 0;i<length;i++){
     		finalAnswer[i]=(int)(Math.random()*10); 
               for(int j = 0;j<i;j++){
@@ -37,7 +37,7 @@ public class Main {
                  }
               }
         }
-    	System.out.println("Éú³É×îÖÕµÄ´ğ°¸£º");
+    	System.out.println("ç”Ÿæˆæœ€ç»ˆçš„ç­”æ¡ˆï¼š");
     	for(int i = 0;i<length;i++){
             System.out.print(finalAnswer[i]+" ");
         }
@@ -46,7 +46,7 @@ public class Main {
     }
     
     /**
-     * »ñÈ¡²Â²â´ğ°¸²¢¶Ô±È
+     * è·å–çŒœæµ‹ç­”æ¡ˆå¹¶å¯¹æ¯”
      * @throws IOException 
      */
     public static void generateAnswerAndCompare() throws IOException {
@@ -56,7 +56,7 @@ public class Main {
             int myAnswer[] = new int[length];
             String[] s = input.split(" ");
             Arrays.toString(s);
-            //½«×Ö·û´®Êı×é×ªÎªÊı×é
+            //å°†å­—ç¬¦ä¸²æ•°ç»„è½¬ä¸ºæ•°ç»„
             for(int j = 0 ;j < s.length;j++) {
             	myAnswer[j] = Integer.parseInt(s[j]);
             	//System.out.println(myAnswer[j]);
@@ -74,7 +74,7 @@ public class Main {
             	}
             }
             
-            System.out.println("Êä³öÖ¸Áî¶Ô±È£º");
+            System.out.println("è¾“å‡ºæŒ‡ä»¤å¯¹æ¯”ï¼š");
             System.out.println(sameA+"A"+positionB+"B");
             sameA = 0;
             positionB = 0;
