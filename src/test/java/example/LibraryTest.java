@@ -3,6 +3,9 @@ package example;/*
  */
 
 import org.junit.jupiter.api.*;
+import org.mockito.internal.stubbing.answers.AnswersWithDelay;
+
+import tw.Main;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -16,10 +19,12 @@ class LibraryTest {
 
     @BeforeAll
     static void initTestEnv() {
+    	
     }
 
     @BeforeEach
     void initEveryMethod() {
+    	
     }
 
     @Test
@@ -85,5 +90,12 @@ class LibraryTest {
             // Simulate task that takes more than 10 ms.
             Thread.sleep(100);
         });
+    }
+    
+    @Test
+    void should_get_random_number_is_different() {
+    	Main main = new Main();
+    	Main.getRandomAnswer();
+    	int[] answer = new int[4];
     }
 }
