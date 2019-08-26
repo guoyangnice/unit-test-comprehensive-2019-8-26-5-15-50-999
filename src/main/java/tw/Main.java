@@ -43,7 +43,6 @@ public class Main {
         }
     	
     	System.out.println();
-    	return finalAnswer;
     }
     
     /**
@@ -73,7 +72,6 @@ public class Main {
             			}
             		}
             	}
-            	
             }
             
             System.out.println("输出指令对比：");

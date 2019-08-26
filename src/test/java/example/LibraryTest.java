@@ -5,6 +5,7 @@ package example;/*
 import org.junit.jupiter.api.*;
 import org.mockito.internal.stubbing.answers.AnswersWithDelay;
 
+import tw.CheckNumber;
 import tw.Main;
 
 import java.util.LinkedList;
@@ -92,10 +93,16 @@ class LibraryTest {
         });
     }
     
-    @Test
-    void should_get_random_number_is_different() {
-    	Main main = new Main();
-    	Main.getRandomAnswer();
-    	int[] answer = new int[4];
+    @Test 
+    void should_return_false_when_enter_right_number() {
+    	CheckNumber checkNumber = new CheckNumber();
+    	assertEquals(true, checkNumber.isValid(new int[] {1,2,3,4}));
     }
+    
+    @Test 
+    void should_return_false_when_enter_wrong_number() {
+    	CheckNumber checkNumber = new CheckNumber();
+    	assertEquals(false, checkNumber.isValid(new int[] {10,2,3,4}));
+    }
+    
 }
